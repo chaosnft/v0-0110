@@ -197,7 +197,7 @@ export default function About() {
                 style={{ background: "transparent" }}
               >
                 <ambientLight intensity={1.0} /> {/* Tăng cường độ ánh sáng môi trường */}
-                <pointLight position={[10, 10, 10]} intensity={0.5} /> {/* Giảm point light một chút */}
+                <pointLight position={[10, 10, 10]} intensity={0.4} /> {/* Giảm point light một chút */}
                 <Globe isVisible={isVisible} />
                 <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} />
               </Canvas>
