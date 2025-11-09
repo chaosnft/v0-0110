@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Header({ scrolled }: { scrolled: boolean }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -14,7 +15,7 @@ export default function Header({ scrolled }: { scrolled: boolean }) {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold tracking-tight">CAPITAL</div>
+        <Image src="/logo.png" alt="0110 Capital" width={90} height={30} priority />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-12 items-center">
@@ -27,9 +28,9 @@ export default function Header({ scrolled }: { scrolled: boolean }) {
           <Link href="#contact" className="text-sm font-medium hover:opacity-60 transition-opacity">
             CONTACT
           </Link>
-          <button className="px-6 py-2 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors">
+          <Link href="#contact" className="px-6 py-2 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors">
             GET IN TOUCH
-          </button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -53,9 +54,9 @@ export default function Header({ scrolled }: { scrolled: boolean }) {
             <Link href="#contact" className="text-sm font-medium">
               CONTACT
             </Link>
-            <button className="w-full px-6 py-2 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors">
+            <Link href="#contact" className="w-full px-6 py-2 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors block text-center">
               GET IN TOUCH
-            </button>
+            </Link>
           </nav>
         </div>
       )}
